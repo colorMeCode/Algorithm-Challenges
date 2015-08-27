@@ -2,7 +2,7 @@
 //Note : A prime number (or a prime) is a natural number greater than 1 that has no positive divisors other than 1 and itself.
 
 function prime(number) {
-	
+
 	var result;
 
 	if (typeof number === 'number') {
@@ -11,13 +11,15 @@ function prime(number) {
 		} else {
 		for (var i = number - 1; i < number && i !== 1; i -= 1) {
 				if (number % i === 0) {
-					console.log(i);
 					result = number + " is not a prime number.";
+					return result;
 				} else {
 					result = number + " is a prime number."
 				};
 			};
 		};
+	} else {
+		console.log(number + " is not a number. Please enter a valid number.")
 	};
 
 	return result;
