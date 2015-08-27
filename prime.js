@@ -14,12 +14,12 @@ function prime(number) {
 					result = number + " is not a prime number.";
 					return result;
 				} else {
-					result = number + " is a prime number."
+					result = number + " is a prime number.";
 				};
 			};
 		};
 	} else {
-		console.log(number + " is not a number. Please enter a valid number.")
+		console.log(number + " is not a number. Please enter a valid number.");
 	};
 
 	return result;
