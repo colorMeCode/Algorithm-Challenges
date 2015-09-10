@@ -18,16 +18,16 @@ var perfectNumber = function(number) {
 		if (number % i === 0) {
 			num.push(i);
 		};
+  };
 
-		for (var j = 0; j < num.length; j += 1) {
-			sum += num[j];
-		};
+	for (var j = 0; j < num.length; j += 1) {
+		sum += num[j];
+	};
 
-			if (sum / 2 === number) {
-				sum = true;
-			} else {
-				sum = false;
-		};
+		if (sum / 2 === number) {
+			sum = true;
+		} else {
+			sum = false;
 	};
 
 	return sum;
@@ -43,7 +43,7 @@ function findPerfect(number) {
   };
 }
 
-findPerfect(10000);
+findPerfect(10000); //6, 28, 496, 8128
 
 //W3Resource solution:
 function is_perfect(number)
@@ -67,6 +67,10 @@ var temp = 0;
         }   
  } 
 is_perfect(28); 
+
+
+
+
 
 
 
