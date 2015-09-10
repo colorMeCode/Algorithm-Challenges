@@ -2,7 +2,7 @@
 Example string : 'Web Development Tutorial' 
 Expected Output : 'Development'*/
 
-function longestString (string) {
+function longestWord (string) {
 	var longest = "";
 	var compare = string.split(' ');
 	for(var i = 0; i < compare.length; i += 1) {
