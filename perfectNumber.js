@@ -33,6 +33,17 @@ var perfectNumber = function(number) {
 	return sum;
 };
 
+function findPerfect(number) {
+  var n = 0;
+  while (n < number) {
+    n++
+    if (perfectNumber(n)) {
+      console.log(n);
+    };
+  };
+}
+
+findPerfect(10000);
 
 //W3Resource solution:
 function is_perfect(number)
