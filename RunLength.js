@@ -18,7 +18,7 @@ function RunLength(str) {
 
   //store unique characters into an array
   for (var i = 0, len = str.length; i < len; i++) {
-    if (arr.indexOf(str[i]) < 0) {
+    if (arr.indexOf(str[i]) < 0 || str.charCodeAt(i) !== str.charCodeAt(i - 1)) {
       arr.push(str[i]);
     };
   };
@@ -28,6 +28,10 @@ function RunLength(str) {
     temp = str[j];
     if (temp === str[j + 1]) {
       count += 1;
+    } else if (typeof arr[arr.indexOf(temp) - 1] === 'number') {
+      index = arr.lastIndexOf(temp);
+      arr.splice(index, 0, count);
+      count = 1;
     } else {
       //insert count before character index
       index = arr.indexOf(temp);
@@ -40,4 +44,5 @@ function RunLength(str) {
   return arr; 
 }
 
-RunLength('aaabbcde');
+RunLength("aabbcdewwwbbbw");
+
