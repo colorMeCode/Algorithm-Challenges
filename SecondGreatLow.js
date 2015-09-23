@@ -24,8 +24,9 @@ function SecondGreatLow(arr) {
 
   while (low <= lowest) {
     low = arr.shift();
+    console.log(low);
   }
-  while (highest < high) {
+  while (highest <= high) {
     high = arr.pop();
   }
 
